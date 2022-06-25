@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .reset {
+        counter-reset: counter;
+      }
+      .counter:before {
+        content: counters(counter, ".") ". ";
+        counter-increment: counter;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reset">
+      <div class="counter">
+        替换元素
+        <div class="reset">
+          <div class="counter">替换元素的尺寸计算规则</div>
+          <div class="counter">替换元素和 content 是什么关系呢？</div>
+          <div class="reset">
+            <div class="counter">替换元素的尺寸计算规则</div>
+            <div class="counter">替换元素和 content 是什么关系呢？</div>
+          </div>
+        </div>
+      </div>
+      <div class="counter">
+        content 的使用场景
+        <div class="reset">
+          <div class="counter">插入字符</div>
+          <div class="counter">辅助元素生成</div>
+          <div class="counter">图片生成</div>
+          <div class="counter">attr 属性值内容生成</div>
+          <div class="counter">字符内容生成</div>
+          <div class="counter">计数器</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
